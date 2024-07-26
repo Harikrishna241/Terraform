@@ -1,7 +1,7 @@
 resource "aws_instance" "Expense" {
     count = length(var.instance_names)
     ami = var.ami_id
-    instance_type = var.instance_type
+    instance_type = local.instance_type
     vpc_security_group_ids = [aws_security_group.sg.id]
     tags = merge(
         var.tag_names,

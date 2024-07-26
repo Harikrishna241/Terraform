@@ -1,5 +1,5 @@
 output "aws_image" {
-    value = aws_instance.Prod[*].ami_id
+    value = aws_instance.Expense
 }
   
 # output "aws_state" {
